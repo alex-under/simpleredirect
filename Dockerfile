@@ -4,4 +4,4 @@ COPY redirect.py /
 ENV REDIRECT_URL="http://localhost"
 EXPOSE 8080
 
-ENTRYPOINT ["/redirect.py", "--ip", "0.0.0.0", "--port", "8080", "${REDIRECT_URL}"]
+ENTRYPOINT /redirect.py --ip 0.0.0.0 --port 8080 ${REDIRECT_URL}
